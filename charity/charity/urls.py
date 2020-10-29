@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from trust import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+    path('',views.Homepage.as_view(),name='index'),
+    path('about/',views.Aboutpage.as_view(),name='about'),
+    path('contact/',views.ContactPage.as_view(),name='contact'),
+    path('events/',views.EventPage.as_view(),name='events'),
+    path('fundraising/',views.FundraisPage.as_view(),name='fundraising'),
+    path('donate/',views.DonatePage.as_view(),name='donate'),
+    path('project/',views.ProjectPage.as_view(),name='project'),
+    path('volunteer/',views.VolunteerPage.as_view(), name='volunteer'),
+
 ]
