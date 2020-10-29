@@ -9,7 +9,7 @@ class HomePage(View):
         return render(request, 'index.html')
 
 
-class Aboutpage(View):
+class AboutPage(View):
     def get(self, request, *args, **kwargs):
 
         return render(request, 'about.html')

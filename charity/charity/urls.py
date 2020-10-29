@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from trust import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Homepage.as_view(),name='index'),
-    path('about/',views.Aboutpage.as_view(),name='about'),
+    path('',views.HomePage.as_view(),name='index'),
+    path('about/',views.AboutPage.as_view(),name='about'),
     path('contact/',views.ContactPage.as_view(),name='contact'),
     path('events/',views.EventPage.as_view(),name='events'),
     path('fundraising/',views.FundraisPage.as_view(),name='fundraising'),
